@@ -90,7 +90,7 @@ object ThermometerExample {
 
     // Configure Spark
     val sparkConf: SparkConf = new SparkConf()
-    sparkConf.setMaster("local[*]").setAppName(this.getClass.getSimpleName)
+    sparkConf.setMaster("yarn").setAppName(this.getClass.getSimpleName)
     val spark: SparkSession = SparkSession
       .builder
       .config(sparkConf)
